@@ -1362,6 +1362,7 @@ var Hm_Utils = {
             if (force_on) {
                 $(class_name).css('display', 'none');
             }
+            $(class_name).prev().toggleClass("open");
             $(class_name).toggle();
             Hm_Utils.save_to_local_storage('formatted_folder_list', $('.folder_list').html());
         }
