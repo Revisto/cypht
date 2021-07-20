@@ -4,7 +4,7 @@ a:hover { color: #000 !important; }
 p { margin: 0px; padding: 0px; }
 br { clear: both; }
 html, body { max-width: 100%; min-height: 100%; background-color: #fff; }
-body { background: linear-gradient(180deg, #faf6f5, #faf6f5, #faf6f5, #faf6f5, #fff); font-size: 1em; height: 100%; color: #333; font-family: Arial; padding: 0px; margin: 0px; min-width: 700px; font-size: 100%; }
+body { background: linear-gradient(180deg, #faf6f5, #faf6f5, #faf6f5, #faf6f5, #fff); font-size: 1em; height: 100%; color: #333; font-family: Manrope; padding: 0px; margin: 0px; min-width: 700px; font-size: 100%; }
 table { width: 100%; border-spacing: 0px; }
 td { vertical-align: top; }
 .adv_controls .combined_sort, .message_list .combined_sort { font-size: 80%; margin-top: -2px; ; float: right; margin-right: 120px; }
