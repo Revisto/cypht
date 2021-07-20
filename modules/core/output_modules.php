@@ -186,7 +186,7 @@ class Hm_Output_login_start extends Hm_Output_Module {
                 'clear:left;}.title{text-align:center;font-size:38px;font-weight:normal;padding:0px;margin:0px;'.
                 'margin-bottom:40px;letter-spacing:-1px;color:#999;}html{height: 100%;},body{max-width:100%;min-height:100%;'.
                 'background-color:#fff;}body{background:linear-gradient(180deg,#faf6f5,#faf6f5,#faf6f5,#faf6f5,'.
-                '#fff);font-size:1em;height:100%;color:#333;font-family:Arial;padding:0px;margin:0px;min-width:700px;'.
+                '#fff);font-size:1em;height:100%;color:#333;font-family:Manrope;padding:0px;margin:0px;min-width:700px;'.
                 'font-size:100%;}input,option,select{font-size:100%;padding:3px;border:none;outline:none}textarea,select,input{'.
                 'background-color:#fff;color:#333;border-radius:3px;}.screen_reader{position:absolute'.
                 ';top:auto;width:1px;height:1px;overflow:hidden;}.username,.password{border-bottom: 3px solid #ccc;height:25px;}'.
@@ -468,9 +468,17 @@ class Hm_Output_header_css extends Hm_Output_Module {
             }
             $res .= 'media="all" rel="stylesheet" type="text/css" />';
         }
-        $res .= '<style type="text/css">@font-face { font-family: "Behdad";
-            src: url("'.WEB_ROOT.'modules/core/assets/fonts/Behdad/Behdad-Regular.woff2") format("woff2"),
-            url("'.WEB_ROOT.'modules/core/assets/fonts/Behdad/Behdad-Regular.woff") format("woff");</style>';
+
+        $res .= '<style type="text/css">@font-face { font-family: "Manrope";
+            src: url("'.WEB_ROOT.'modules/core/assets/fonts/Manrope/Manrope-Regular.woff2") format("woff2"),
+            url("'.WEB_ROOT.'modules/core/assets/fonts/Manrope/Manrope-Regular.woff") format("woff");</style>';
+        
+        if ($this->dir == "rtl"){
+            $res .= '<style type="text/css">@font-face { font-family: "Behdad";
+                src: url("'.WEB_ROOT.'modules/core/assets/fonts/Behdad/Behdad-Regular.woff2") format("woff2"),
+                url("'.WEB_ROOT.'modules/core/assets/fonts/Behdad/Behdad-Regular.woff") format("woff");</style>';
+        }
+        
         return $res;
     }
 }
