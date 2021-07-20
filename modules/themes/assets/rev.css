@@ -32,3 +32,4 @@ textarea, select, input, .toggle_link { border-color: #ccc !important; color: #6
 }
 .nux_help, .nux_dev_news, .nux_welcome { border: unset !important; border-radius: 25px !important; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important; }
 .content_title { font-size: 150% !important; }
+.src_name { border: unset !important; }
