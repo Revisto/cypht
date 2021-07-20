@@ -471,7 +471,11 @@ class Hm_Output_header_css extends Hm_Output_Module {
 
         $res .= '<style type="text/css">@font-face { font-family: "Manrope";
             src: url("'.WEB_ROOT.'modules/core/assets/fonts/Manrope/Manrope-Regular.woff2") format("woff2"),
-            url("'.WEB_ROOT.'modules/core/assets/fonts/Manrope/Manrope-Regular.woff") format("woff"); }</style>';
+            url("'.WEB_ROOT.'modules/core/assets/fonts/Manrope/Manrope-Regular.woff") format("woff"); }
+            { font-family: "Manrope";
+            src: url("'.WEB_ROOT.'modules/core/assets/fonts/Manrope/Manrope-Bold.woff2") format("woff2"),
+            url("'.WEB_ROOT.'modules/core/assets/fonts/Manrope/Manrope-Bold.woff") format("woff");
+            font-weight:bold; }</style>';
         
         if ($this->dir == "rtl"){
             $res .= '<style type="text/css">@font-face { font-family: "Behdad";
