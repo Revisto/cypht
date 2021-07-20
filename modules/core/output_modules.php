@@ -183,16 +183,21 @@ class Hm_Output_login_start extends Hm_Output_Module {
                 '{position:fixed;right:20px;top:15px;min-height:30px;display:none;background-color:#fff;color:teal;'.
                 'margin-top:0px;padding:15px;padding-bottom:5px;white-space:nowrap;border:solid 1px #999;border-radius:'.
                 '5px;filter:drop-shadow(4px 4px 4px #ccc);z-index:101;}.g-recaptcha{margin-left:-12px;}.mobile .g-recaptcha{'.
-                'clear:left;margin-left:20px;}.title{font-weight:normal;padding:0px;margin:0px;margin-left:20px;'.
-                'margin-bottom:20px;letter-spacing:-1px;color:#999;}html,body{max-width:100%;min-height:100%;'.
+                'clear:left;}.title{text-align:center;font-size:38px;font-weight:normal;padding:0px;margin:0px;'.
+                'margin-bottom:40px;letter-spacing:-1px;color:#999;}html{height: 100%;},body{max-width:100%;min-height:100%;'.
                 'background-color:#fff;}body{background:linear-gradient(180deg,#faf6f5,#faf6f5,#faf6f5,#faf6f5,'.
                 '#fff);font-size:1em;height:100%;color:#333;font-family:Arial;padding:0px;margin:0px;min-width:700px;'.
-                'font-size:100%;}input,option,select{font-size:100%;padding:3px;}textarea,select,input{border:solid '.
-                '1px #ddd;background-color:#fff;color:#333;border-radius:3px;}.screen_reader{position:absolute'.
-                ';top:auto;width:1px;height:1px;overflow:hidden;}.login_form{float:left;font-size:90%;'.
-                'padding-top:60px;height:300px;border-radius:0px 0px 20px 0px;margin:0px;background-color:#f5f5f5;'.
-                'width:300px;padding-left:20px;}.login_form input{clear:both;float:left;padding:4px;margin-left:20px;'.
-                'margin-top:10px;margin-bottom:10px;}#username,#password{width:200px;}.err{color:red !important;}.long_session'.
+                'font-size:100%;}input,option,select{font-size:100%;padding:3px;border:none;outline:none}textarea,select,input{'.
+                'background-color:#fff;color:#333;border-radius:3px;}.screen_reader{position:absolute'.
+                ';top:auto;width:1px;height:1px;overflow:hidden;}.username,.password{border-bottom: 3px solid #ccc;height:25px;}'.
+                '.submit{transition:0.6s;height:45px;background-color:#f5f5f596;border-radius:inherit;}.submit:hover{background-color:#e0e0e0}'.
+                '.container{margin-bottom:6%;background-color:#fff;padding:75px;border-radius:25px;box-shadow:0 5px 10px 0px rgb(0 0 0 / 10%)'.
+                ';-moz-box-shadow:0 5px 10px 0px rgba(0,0,0,0.1);-webkit-box-shadow:0 5px 10px 0px rgb(0 0 0 / 10%)'.
+                ';-o-box-shadow:0 5px 10px 0px rgba(0,0,0,0.1);-ms-box-shadow:0 5px 10px 0px rgba(0,0,0,0.1);}.login_form{display:flex'.
+                ';justify-content:center;align-items:center;flex-direction:column;float:left;font-size:90%;'.
+                'height:100%;border-radius:0px 0px 20px 0px;margin:0px;background-color:#f5f5f5;'.
+                'width:100%;}.login_form input{width: 210px;clear:both;float:left;padding:4px;'.
+                'margin-top:10px;margin-bottom:35px;}#username,#password{width:200px;}.err{color:red !important;}.long_session'.
                 '{float:left;}.long_session input{padding:0px;float:none;}.mobile .long_session{float:left;clear:both;}</style>';
 
         return $css.'<form class="login_form" method="POST">';
@@ -218,13 +223,13 @@ class Hm_Output_login extends Hm_Output_Module {
             ' <label for="stay_logged_in">'.$this->trans('Stay logged in').'</label></div>';
         }
         if (!$this->get('router_login_state')) {
-            return '<h1 class="title">'.$this->html_safe($this->get('router_app_name', '')).'</h1>'.
-                ' <input type="hidden" name="hm_page_key" value="'.Hm_Request_Key::generate().'" />'.
-                ' <label class="screen_reader" for="username">'.$this->trans('Username').'</label>'.
-                '<input autofocus required type="text" placeholder="'.$this->trans('Username').'" id="username" name="username" value="">'.
-                ' <label class="screen_reader" for="password">'.$this->trans('Password').'</label>'.
-                '<input required type="password" id="password" placeholder="'.$this->trans('Password').'" name="password">'.
-                $stay_logged_in.' <input style="cursor:pointer;" type="submit" id="login" value="'.$this->trans('Login').'" />';
+            return '<div class="container"><h1 class="title">'.$this->html_safe($this->get('router_app_name', '')).'</h1>'.
+                '<input type="hidden" name="hm_page_key" value="'.Hm_Request_Key::generate().'" />'.
+                '<div class="input"><label class="screen_reader" for="username">'.$this->trans('Username').'</label>'.
+                '<input class="username" autofocus required type="text" placeholder="'.$this->trans('Username').'" id="username" name="username" value=""></div>'.
+                '<div class="input"><label class="screen_reader" for="password">'.$this->trans('Password').'</label>'.
+                '<input class="password" required type="password" id="password" placeholder="'.$this->trans('Password').'" name="password"></div>'.
+                $stay_logged_in.' <input class="submit" style="cursor:pointer;" type="submit" id="login" value="'.$this->trans('Login').'" /></div>';
         }
         else {
             $settings = $this->get('changed_settings', array());
@@ -1691,7 +1696,9 @@ class Hm_Output_message_list_heading extends Hm_Output_Module {
         $res .= message_controls($this).'<div class="mailbox_list_title">'.
             implode('<img class="path_delim" src="'.Hm_Image_Sources::$caret.'" alt="&gt;" width="8" height="8" />', array_map( function($v) { return $this->trans($v); },
                 $this->get('mailbox_list_title', array()))).'</div>';
-
+        if (!$this->get('is_mobile')) {
+            $res .= combined_sort_dialog($this);
+        }
         $res .= list_controls($refresh_link, $config_link, $source_link);
 	    $res .= message_list_meta($this->module_output(), $this);
         $res .= list_sources($this->get('data_sources', array()), $this);
