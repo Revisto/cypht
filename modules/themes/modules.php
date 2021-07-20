@@ -108,6 +108,7 @@ if (!hm_exists('hm_themes')) {
 function hm_themes() {
     return array(
         'default' => 'White Bread (Default)',
+        'rev' => 'revisto',
         'blue' => 'Boring Blues',
         'dark' => 'Dark But Not Too Dark',
         'tdark' => 'Too Dark',
