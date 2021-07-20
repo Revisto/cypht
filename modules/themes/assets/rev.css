@@ -1,7 +1,7 @@
-div { background-color: transparent !important; }
+div { background-color: #fff !important; }
 html * { color: #404a5d !important; border-color: #d3d3d3 !important; }
 body { background: none !important; background-color: transparent !important; }
-html { background: #fff !important; }
+html { background: #f8f9fd !important; }
 img { opacity: .3 !important; }
 .msg_text_inner img, .apod_image img { opacity: 1 !important; }
 a { color: #404a5d !important; }
