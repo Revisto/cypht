@@ -561,6 +561,7 @@ class Hm_Output_js_data extends Hm_Output_Module {
             'var hm_debug = function() { return "'.(DEBUG_MODE ? '1' : '0').'"; };'.
             'var hm_mailto = function() { return '.($this->get('mailto_handler') ? '1' : '0').'; };'.
             'var hm_page_name = function() { return "'.$this->html_safe($this->get('router_page_name')).'"; };'.
+            'var hm_language_direction = function() { return "'.$this->html_safe($this->dir).'"; };'.
             'var hm_list_path = function() { return "'.$this->html_safe($this->get('list_path', '')).'"; };'.
             'var hm_list_parent = function() { return "'.$this->html_safe($this->get('list_parent', '')).'"; };'.
             'var hm_msg_uid = function() { return Hm_Utils.get_from_global("msg_uid", "'.$this->html_safe($this->get('uid', '')).'"); };'.
@@ -1708,7 +1709,7 @@ class Hm_Output_message_list_heading extends Hm_Output_Module {
         $res .= message_controls($this).'<div class="mailbox_list_title">'.
             implode('<img class="path_delim" src="'.Hm_Image_Sources::$caret.'" alt="&gt;" width="8" height="8" />', array_map( function($v) { return $this->trans($v); },
                 $this->get('mailbox_list_title', array()))).'</div>';
-        if (!$this->get('is_mobile')) {
+        if (!$this->get('is_mobile') && substr($this->get('list_path'), 0, 5) != 'imap_') {
             $res .= combined_sort_dialog($this);
         }
         $res .= list_controls($refresh_link, $config_link, $source_link);
