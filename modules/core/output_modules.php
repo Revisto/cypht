@@ -1172,7 +1172,7 @@ class Hm_Output_main_menu_start extends Hm_Output_Module {
                 '" class="debug_title">'.$this->trans('Debug').'</span>';
         }
         $res .= '<img alt="" class="menu_caret" src="'.Hm_Image_Sources::$chevron.'" width="8" height="8" />'.
-        '</div><div class="main"><ul class="folders">';
+        '</div><div class="menu main"><ul class="folders">';
         if ($this->format == 'HTML5') {
             return $res;
         }
@@ -1281,7 +1281,7 @@ class Hm_Output_email_menu_content extends Hm_Output_Module {
             else {
                 $res .= '<div style="display: none;" ';
             }
-            $res .= 'class="'.$this->html_safe($src).'"><ul class="folders">';
+            $res .= 'class="menu '.$this->html_safe($src).'"><ul class="folders">';
             if ($name == 'Email' && !$single) {
                 $res .= '<li class="menu_email"><a class="unread_link" href="?page=message_list&amp;list_path=email">';
                 if (!$this->get('hide_folder_icons')) {
@@ -1309,7 +1309,7 @@ class Hm_Output_settings_menu_start extends Hm_Output_Module {
     protected function output() {
         $res = '<div class="src_name" data-source=".settings">'.$this->trans('Settings').
             '<img class="menu_caret" src="'.Hm_Image_Sources::$chevron.'" alt="" width="8" height="8" />'.
-            '</div><ul style="display: none;" class="settings folders">';
+            '</div><ul style="display: none;" class="menu settings folders">';
         $res .= '<li class="menu_home"><a class="unread_link" href="?page=home">';
         if (!$this->get('hide_folder_icons')) {
             $res .= '<img class="account_icon" src="'.$this->html_safe(Hm_Image_Sources::$home).'" alt="" width="16" height="16" /> ';
