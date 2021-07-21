@@ -16,7 +16,6 @@ textarea, select, input, .toggle_link { border-color: #ccc !important; color: #6
 .content_title { color: #404a5d !important; background: unset !important; }
 .debug, .subtitle { color: #3a5aa4 !important; }
 .subject a { color: #33539d !important; }
-.selected_menu a { color: #1d2a46 !important; }
 .icon { color: #aaa !important; }
 .online { color: green; }
 .sys_messages { background-color: #e8f0ff !important; }
@@ -34,3 +33,6 @@ textarea, select, input, .toggle_link { border-color: #ccc !important; color: #6
 .content_title { font-size: 150% !important; }
 .folder_list { background-color: #fff !important; margin-right: 15px !important; padding-left: 15px !important; padding-right: 0px !important; }
 .menu { overflow: auto; }
+.total_unread_count, .unread_count { float: right !important; color: #fff !important; padding: 1px !important; }
+.selected_menu a { color: #86a8e7 !important; font-size: 140%; font-weight: bolder; }
+.selected_menu img { scale: 140%; filter: invert(0.30) sepia(1) saturate(500%) hue-rotate(180deg) brightness(100%); }
