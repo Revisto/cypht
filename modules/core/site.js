@@ -1371,7 +1371,7 @@ var Hm_Utils = {
                     $(class_name).slideUp(400)
                 }
             }
-            Hm_Utils.save_to_local_storage('formatted_folder_list', $('.folder_list').html());
+            setTimeout(function(){ Hm_Utils.save_to_local_storage('formatted_folder_list', $('.folder_list').html()); }, 450);
         }
         return false;
     },
