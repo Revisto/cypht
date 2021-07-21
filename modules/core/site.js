@@ -1363,7 +1363,12 @@ var Hm_Utils = {
                 $(class_name).css('display', 'none');
             }
             $(class_name).prev().toggleClass("open");
-            $(class_name).toggle();
+            if ($(class_name).css("display") == "none") {
+                $(class_name).slideDown(500)
+            }
+            else {
+                $(class_name).slideUp(750)
+            }
             Hm_Utils.save_to_local_storage('formatted_folder_list', $('.folder_list').html());
         }
         return false;
