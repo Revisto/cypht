@@ -45,9 +45,6 @@ textarea, select, input, .toggle_link {
 .content_cell {
     background-color: unset !important;
 }
-.list_controls {
-    background: none !important;
-}
 .msg_controls {
     color: #404a5d !important;
     background: #fff !important;
@@ -58,7 +55,23 @@ textarea, select, input, .toggle_link {
     color: #7C83FD !important;
     margin-top: -8px;
     font-weight: 600;
-    padding-bottom: 25px;
+    border-bottom: 2px solid #7c83fd47 !important;
+    padding-bottom: 40px;
+}
+.list_controls {
+    background: #7C83FD !important;
+    padding: 14px !important;
+    margin: 13px !important;
+    padding-top: 0px !important;
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.list_controls a {
+    opacity: 1 !important;
+}
+.list_controls img {
+    filter: invert(1) !important;
+    opacity: 0.8 !important;
 }
 .debug, .subtitle {
     color: #3a5aa4 !important;
@@ -127,7 +140,7 @@ textarea, select, input, .toggle_link {
     font-weight: bolder;
 }
 .selected_menu img {
-    scale: 140%;
+    transform: scale(1.5);
     opacity: 0.7 !important;
     filter: invert(44%) sepia(42%) saturate(1541%) hue-rotate(210deg) brightness(111%) contrast(98%);
     vertical-align: 0px !important;
@@ -146,9 +159,42 @@ textarea, select, input, .toggle_link {
     border: none !important;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important
 }
+.calendar_month th {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.11) 0px 8px 24px !important;
+    margin-bottom: 100px;
+    background-color: #96BAFF !important;
+    color: #fff !important;
+    font-weight: bold;
+}
 .today {
     background-color: #96BAFF !important;
     border-radius: 20px;
     border: none !important;
     color: #fff !important 
 }
+.next_month {
+    background-color: #96baff !important;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-left: 6px;
+    border-radius: 8px;
+    color: #fff !important;
+    font-weight: 900;
+}
+.prev, .next {
+    background-color: #96baff !important;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 8px;
+    color: #fff !important;
+    font-weight: 900;
+}
+.next {
+    margin-left: 6px;
+}
+.prev {
+    margin-right: 6px;
+}
+
