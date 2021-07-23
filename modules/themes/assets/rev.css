@@ -1,41 +1,154 @@
-div { background-color: #fff !important; }
-html * { color: #404a5d !important; border-color: #f2f8ff !important; }
-body { background: none !important; background-color: transparent !important; }
-html { background: #f8f9fd !important; }
-img { opacity: .3 !important; }
-.msg_text_inner img, .apod_image img { opacity: 1 !important; }
-a { color: #404a5d !important; }
-a:hover { color: #39528c !important; }
-textarea, select, input, .toggle_link { border-color: #ccc !important; color: #666; background-color: #fff; }
-.loading_icon { background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAHCAIAAABx4H/3AAAACXBIWXMAAA4mAAAN/wHwU+XzAAAAB3RJTUUH4AMPFQ81DpVi0wAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAGjSURBVEjHjVVJot0gDLPkvN7/Gr1Gj9Jj9AWpCxICZPqsgvEgy0Pw+8/f72rbRV6LZRdZDsmlWPZaqsRFm1opUeRVm6RafYsjYl1VzYssVXNFxL/v5kSOKlFZw1b5WiUiwGR+AgATwJIkIgkCS4KMJRkRTZ7Esgw6AJIg4pOMiF8f7PpYsj4hEyR6qyRwfFR53B3a1w9ARIS8fdydO/P+SIfDzj9tja4EEPfxOD5ZnpSJTQesIY5XPeKsisRLIuyh9KHPLLgTya7XPQyS8AlRszgzUKnpU6rXh6pod7czAo8otesQIR+A7RciqqLeCn9US/aZoD4GAHnzSGCsmyv6EbqbyuTZduusKep0bR7Qugao4a5q45bPxE6RL2t2V8uXznq1sU0cIDw2l23flIZ88YyfgdXE48iH7cbj1CZ1GZ1rNs11vs0he7j2xc7qRgk9iNzn9nJttfXRdtaF2sY1fL/5+hcCxLQNjiiTnynxcx2Bmf0iP9PFvvmfd1YPAvtS8NVUnpvM448CgC0wz3P33Fny0IYcEwbAmyblD3q3brqH8x9z/ECOMpTSWwAAAABJRU5ErkJggg==') repeat-x top left; background-size: cover; background-position: 0px, 0px; }
-.folder_cell { background: none !important; background-color: #fff !important; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; }
-.confirm_logout, .folder_list, .message_list, .configured_server, .add_server, .server_content, .server_section { background-color: #fff !important; }
-.content_cell { background-color: unset !important; }
-.list_controls { background: none !important; }
-.msg_controls { color: #404a5d !important; background: #fff !important; }
-.content_title { background: unset !important; font-size: 225% !important; color: #7C83FD !important; margin-top: -8px; font-weight: 600; padding-bottom: 25px; }
-.debug, .subtitle { color: #3a5aa4 !important; }
-.subject a { color: #33539d !important; }
-.icon { color: #aaa !important; }
-.online { color: green; }
-.sys_messages { background-color: #e8f0ff !important; }
-.empty_list { color: #bbb !important; }
-.checkbox_cell input[type="checkbox"]:checked + label { background-color: #c6d7ff !important; }
-.folders li{padding: 15px !important;}
-.src_name { color: #404a5d !important; background: #fff !important; transition: 0.5s; border-top-left-radius: 50px !important; border-bottom-left-radius: 25px !important; margin-bottom: 25px !important; padding-top: 15px !important; padding-bottom: 15px !important; border: unset !important}
+div {
+    background-color: #fff !important;
+}
+html * {
+    color: #404a5d !important;
+    border-color: #f2f8ff !important;
+}
+body {
+    background: none !important;
+    background-color: transparent !important;
+}
+html {
+    background: #f8f9fd !important;
+}
+img {
+    opacity: .3 !important;
+}
+.msg_text_inner img, .apod_image img {
+    opacity: 1 !important;
+}
+a {
+    color: #404a5d !important;
+}
+a:hover {
+    color: #39528c !important;
+}
+textarea, select, input, .toggle_link {
+    border-color: #ccc !important;
+    color: #666;
+    background-color: #fff;
+}
+.loading_icon {
+    background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAHCAIAAABx4H/3AAAACXBIWXMAAA4mAAAN/wHwU+XzAAAAB3RJTUUH4AMPFQ81DpVi0wAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAGjSURBVEjHjVVJot0gDLPkvN7/Gr1Gj9Jj9AWpCxICZPqsgvEgy0Pw+8/f72rbRV6LZRdZDsmlWPZaqsRFm1opUeRVm6RafYsjYl1VzYssVXNFxL/v5kSOKlFZw1b5WiUiwGR+AgATwJIkIgkCS4KMJRkRTZ7Esgw6AJIg4pOMiF8f7PpYsj4hEyR6qyRwfFR53B3a1w9ARIS8fdydO/P+SIfDzj9tja4EEPfxOD5ZnpSJTQesIY5XPeKsisRLIuyh9KHPLLgTya7XPQyS8AlRszgzUKnpU6rXh6pod7czAo8otesQIR+A7RciqqLeCn9US/aZoD4GAHnzSGCsmyv6EbqbyuTZduusKep0bR7Qugao4a5q45bPxE6RL2t2V8uXznq1sU0cIDw2l23flIZ88YyfgdXE48iH7cbj1CZ1GZ1rNs11vs0he7j2xc7qRgk9iNzn9nJttfXRdtaF2sY1fL/5+hcCxLQNjiiTnynxcx2Bmf0iP9PFvvmfd1YPAvtS8NVUnpvM448CgC0wz3P33Fny0IYcEwbAmyblD3q3brqH8x9z/ECOMpTSWwAAAABJRU5ErkJggg==') repeat-x top left;
+    background-size: cover;
+    background-position: 0px, 0px;
+}
+.folder_cell {
+    background: none !important;
+    background-color: #fff !important;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.confirm_logout, .folder_list, .message_list, .configured_server, .add_server, .server_content, .server_section {
+    background-color: #fff !important;
+}
+.content_cell {
+    background-color: unset !important;
+}
+.list_controls {
+    background: none !important;
+}
+.msg_controls {
+    color: #404a5d !important;
+    background: #fff !important;
+}
+.content_title {
+    background: unset !important;
+    font-size: 225% !important;
+    color: #7C83FD !important;
+    margin-top: -8px;
+    font-weight: 600;
+    padding-bottom: 25px;
+}
+.debug, .subtitle {
+    color: #3a5aa4 !important;
+}
+.subject a {
+    color: #33539d !important;
+}
+.icon {
+    color: #aaa !important;
+}
+.online {
+    color: green;
+}
+.sys_messages {
+    background-color: #e8f0ff !important;
+}
+.empty_list {
+    color: #bbb !important;
+}
+.checkbox_cell input[type="checkbox"]:checked + label {
+    background-color: #c6d7ff !important;
+}
+.folders li{
+   padding: 15px !important;
+}
+.src_name {
+    color: #404a5d !important;
+    background: #fff !important;
+    transition: 0.5s;
+    border-top-left-radius: 50px !important;
+    border-bottom-left-radius: 25px !important;
+    margin-bottom: 25px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    border: unset !important
+}
 .open {
     background: #7C83FD !important;
     color: #fff !important;
     transition: .5s;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.nux_help, .nux_dev_news, .nux_welcome { border: unset !important; border-radius: 25px !important; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important; }
-.folder_list { background-color: #fff !important; margin-right: 15px !important; padding-left: 15px !important; padding-right: 0px !important; }
-.menu { overflow: auto; }
-.total_unread_count, .unread_count { float: right !important; color: #fff !important; padding: 1px !important; background-color: #96BAFF; }
-.selected_menu a { color: #7C83FD !important; font-size: 140%; font-weight: bolder; }
-.selected_menu img { scale: 140%; opacity: 0.7 !important; filter: invert(44%) sepia(42%) saturate(1541%) hue-rotate(210deg) brightness(111%) contrast(98%); vertical-align: 0px !important; }
-.calendar, .month_label { background: #f8f9fd !important; }
-.calendar_month { padding-left: 15px !important; padding-right: 10px !important; border-spacing: 10px; }
-.calendar_month td { background-color: #fff; border-radius: 20px; border: none !important; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important}
-.today { background-color: #96BAFF !important; border-radius: 20px; border: none !important; color: #fff !important }
+.nux_help, .nux_dev_news, .nux_welcome {
+    border: unset !important;
+    border-radius: 25px !important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
+}
+.folder_list {
+    background-color: #fff !important;
+    margin-right: 15px !important;
+    padding-left: 15px !important;
+    padding-right: 0px !important;
+}
+.menu {
+    overflow: auto;
+}
+.total_unread_count, .unread_count {
+    float: right !important;
+    color: #fff !important;
+    padding: 1px !important;
+    background-color: #96BAFF;
+}
+.selected_menu a {
+    color: #7C83FD !important;
+    font-size: 140%;
+    font-weight: bolder;
+}
+.selected_menu img {
+    scale: 140%;
+    opacity: 0.7 !important;
+    filter: invert(44%) sepia(42%) saturate(1541%) hue-rotate(210deg) brightness(111%) contrast(98%);
+    vertical-align: 0px !important;
+}
+.calendar, .month_label {
+    background: #f8f9fd !important;
+}
+.calendar_month {
+    padding-left: 15px !important;
+    padding-right: 10px !important;
+    border-spacing: 10px;
+}
+.calendar_month td {
+    background-color: #fff;
+    border-radius: 20px;
+    border: none !important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important
+}
+.today {
+    background-color: #96BAFF !important;
+    border-radius: 20px;
+    border: none !important;
+    color: #fff !important 
+}
