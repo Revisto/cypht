@@ -189,22 +189,24 @@ class Hm_Output_login_start extends Hm_Output_Module {
                 'margin-top:0px;padding:15px;padding-bottom:5px;white-space:nowrap;border:solid 1px #999;border-radius:'.
                 '5px;filter:drop-shadow(4px 4px 4px #ccc);z-index:101;}.g-recaptcha{margin-left:-12px;}.mobile .g-recaptcha{'.
                 'clear:left;}.title{text-align:center;font-size:38px;font-weight:normal;padding:0px;margin:0px;font-weight: bold;'.
-                'margin-bottom:40px;letter-spacing:-1px;color:#999;}html{height: 100%;},body{max-width:100%;min-height:100%;'.
+                'margin-bottom:40px;letter-spacing:-1px;color:#fff;}html{height: 100%;},body{max-width:100%;min-height:100%;'.
                 'background-color:#fff;}body{background:linear-gradient(180deg,#faf6f5,#faf6f5,#faf6f5,#faf6f5,'.
-                '#fff);font-size:1em;height:100%;color:#333;font-family:Manrope;padding:0px;margin:0px;min-width:700px;'.
+                '#fff);font-size:1em;height:100%;color:#333;font-family:Manrope;padding:0px;margin:0px;'.
                 'font-size:100%;}input,option,select{font-size:100%;padding:3px;border:none;outline:none}textarea,select,input{'.
-                'background-color:#fff;color:#333;border-radius:3px;}.screen_reader{position:absolute'.
-                ';top:auto;width:1px;height:1px;overflow:hidden;}.username,.password{border-bottom: 3px solid #ccc;height:25px;}'.
-                '.submit{transition:0.6s;height:45px;background-color:#f5f5f596;border-radius:inherit;}.submit:hover{background-color:#e0e0e0}'.
-                '.container{margin-bottom:6%;background-color:#fff;padding:75px;border-radius:25px;box-shadow:0 5px 10px 0px rgb(0 0 0 / 10%)'.
+                'background-color:#fff0;color:#fff;border-radius:3px;}.screen_reader{position:absolute'.
+                ';top:auto;width:1px;height:1px;overflow:hidden;}.username,.password{border-bottom: 3px solid #7f98f7;height:25px;}'.
+                '.container{margin-bottom:6%;background-color:#8aa2fe;padding:75px;border-radius:25px;box-shadow:0 5px 10px 0px rgb(0 0 0 / 10%)'.
                 ';-moz-box-shadow:0 5px 10px 0px rgba(0,0,0,0.1);-webkit-box-shadow:0 5px 10px 0px rgb(0 0 0 / 10%)'.
                 ';-o-box-shadow:0 5px 10px 0px rgba(0,0,0,0.1);-ms-box-shadow:0 5px 10px 0px rgba(0,0,0,0.1);}.login_form{display:flex'.
                 ';justify-content:center;align-items:center;flex-direction:column;float:left;font-size:90%;'.
-                'height:100%;border-radius:0px 0px 20px 0px;margin:0px;background-color:#f5f5f5;'.
+                'height:100%;margin:0px;background-image: linear-gradient(45deg,#96BAFF, #7C83FD);'.
                 'width:100%;}.login_form input{width: 210px;clear:both;float:left;padding:4px;'.
                 'margin-top:10px;margin-bottom:35px;}#username,#password{width:200px;}.err{color:red !important;}.long_session'.
-                '{float:left;}.long_session input{padding:0px;float:none;}.mobile .long_session{float:left;clear:both;}</style>';
-
+                '{float:left;}.long_session input{padding:0px;float:none;}.mobile .long_session{float:left;clear:both;}'.
+                '.submit {flex: 1 1 auto;margin:10px;padding: 30px;text-align:center;transition:1.5s;'.
+                'background:linear-gradient(90deg,#7C83FD,#96BAFF,#7C83FD) var(--x, 0)/ 300%;box-shadow: 0 0 20px #8392fd;'.
+                'border-radius:inherit;height:45px;color:#fff;}.submit:hover{--x: 100%;}::placeholder{color:#ffffffbf}</style>';
+                
         return $css.'<form class="login_form" method="POST">';
         }
         else {
