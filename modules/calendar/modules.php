@@ -158,7 +158,7 @@ class Hm_Output_add_cal_event_form extends Hm_Output_Module {
             $res = '<div class="calendar"><div class="content_title">'.$this->trans('Add an Event').'</div>'.
                 '<form method="post">'.
                 '<input type="hidden" name="hm_page_key" value="'.$this->html_safe(Hm_Request_Key::generate()).'" />'.
-                '<table class="event_form">'.
+                '<div class="event"><table class="event_form">'.
                 '<tr><td class="cal_label">'.$this->trans('Title').'</td>'.
                 '<td><input required type="text" name="event_title" /></td></tr>'.
                 '<tr><td class="cal_label">'.$this->trans('Detail').'</td>'.
@@ -174,7 +174,7 @@ class Hm_Output_add_cal_event_form extends Hm_Output_Module {
             }
             $res .= '</select></td></tr>'.
                 '<tr><td></td><td class="event_submit"><input type="submit" value="'.$this->trans('Create').
-                '" /></td></tr></tbody></table></form></div>';
+                '" /></td></tr></tbody></table></div></form></div>';
 
             return $res;
         }
