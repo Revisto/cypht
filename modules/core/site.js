@@ -318,10 +318,11 @@ var Hm_Notices = {
             }
         }
         $('.sys_messages').html(msg_list.join(', '));
+        $('.sys_messages').show()
         $('.sys_messages').css("opacity", "100");
         $('.sys_messages').on('click', function() {
             $('.sys_messages').css("opacity", "0");
-            setTimeout(function(){ $('.sys_messages').html(''); }, 500);
+            setTimeout(function(){ $('.sys_messages').hide(); $('.sys_messages').html(''); }, 500);
             
         });
     },
