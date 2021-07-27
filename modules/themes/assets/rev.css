@@ -87,6 +87,7 @@ textarea, select, input, .toggle_link {
 }
 .sys_messages {
     background-color: #e8f0ff !important;
+    transition: 500ms;
 }
 .empty_list {
     color: #bbb !important;
