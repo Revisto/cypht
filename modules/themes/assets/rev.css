@@ -166,8 +166,7 @@ textarea, select, input, .toggle_link {
     box-shadow: rgba(149, 157, 165, 0.11) 0px 8px 24px !important;
     margin-bottom: 100px;
     background-color: #96BAFF #7C83FD !important;
-    
-    color: #fff !important;
+    color: #404a5dd1 !important;
     font-weight: bold;
 }
 .today {
