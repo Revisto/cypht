@@ -191,6 +191,11 @@ textarea, select, input, .toggle_link {
     border-radius: 8px;
     color: #fff !important;
     font-weight: 900;
+    transition: 0.5s;
+}
+.prev:hover, .next:hover {
+    background-color: #7C83FD !important;
+    color: #fff !important;
 }
 .next {
     margin-left: 6px;
