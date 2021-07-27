@@ -50,7 +50,7 @@ textarea, select, input, .toggle_link {
     background: #fff !important;
 }
 .content_title {
-    background: unset !important;
+    background: #fff !important;
     font-size: 225% !important;
     color: #7C83FD !important;
     margin-top: -8px;
@@ -164,7 +164,8 @@ textarea, select, input, .toggle_link {
     border-radius: 8px;
     box-shadow: rgba(149, 157, 165, 0.11) 0px 8px 24px !important;
     margin-bottom: 100px;
-    background-color: #96BAFF !important;
+    background-color: #96BAFF #7C83FD !important;
+    
     color: #fff !important;
     font-weight: bold;
 }
@@ -197,4 +198,88 @@ textarea, select, input, .toggle_link {
 .prev {
     margin-right: 6px;
 }
+.to_outer {
+    background-color: unset !important;
+    width: calc(100% - 70px);
+}
+.to_outer input, .compose_bcc, .compose_cc, .compose_subject, .compose_to {
+    height: 30px;
+}
+.to_outer input, .compose_bcc, .compose_cc, .compose_subject, .compose_to, .compose_body, .compose_server, .compose_server option {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    margin-top: 25px;
+    border-radius: 5px;   
+    border: unset !important;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+:focus-visible {
+    outline: 3px solid #7C83FD !important;
+}
+.smtp_send, .smtp_save, .smtp_reset, .compose_attach_button, .compose_sign {
+    margin-top: 50px;
+    background-color: #96BAFF;
+    color: #fff !important;
+    padding: 15px;
+    border-radius: 20px;
+    border: unset !important;
+    box-shadow: 0 0 20px #8391fd9f;
+    transition: 1s;
 
+}
+.smtp_send:hover, .smtp_save:hover, .smtp_reset:hover, .compose_attach_button:hover, .compose_sign:hover {
+    background-color: #7C83FD;
+    transition: 1s;
+}
+.compose_server {
+    height: 35px !important;
+    margin-left: 2.5%;
+}
+.compose_form {
+    background-color: #fff;
+    padding-right: 9%;
+    margin-left: 4%;
+    margin-top: 3%;
+    padding-bottom: 4%;
+    border-radius: 40px;
+    padding-top: 3%;
+    
+}
+.smtp_send {
+    margin-left: 5%;
+}
+.compose_page {
+    background-color: #f8f9fd !important;
+}
+.toggle_recipients {
+    background-color: #96BAFF;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    font-size: 120%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 20px;
+    margin-top: calc(25px + 3%);
+    margin-right: 6%;
+    margin-left: 3%;
+    box-shadow: 0 0 20px #8391fd9f;
+    color: #fff !important;
+    transition: 1s;
+}
+.toggle_recipients:hover {
+    background-color: #7C83FD;
+    color: #fff !important;
+}
+.recipient_fields {
+    width: 100%;
+}
+.compose_cc, .compose_bcc {
+    width: calc(100% - 70px) !important;
+}
+select option {
+    background: rgb(150 186 255);
+    color: #fff !important;
+}
