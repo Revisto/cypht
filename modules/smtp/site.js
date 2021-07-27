@@ -165,10 +165,18 @@ var save_compose_state = function(no_files, notice) {
 var toggle_recip_flds = function() {
     var symbol = '+';
     if ($('.toggle_recipients').text() == '+') {
-        symbol = '-';
+        symbol = ' - ';
     }
     $('.toggle_recipients').text(symbol);
-    $('.recipient_fields').toggle();
+    if ($('.recipient_fields').css("overflow") != "hidden") {
+        $('.recipient_fields').prev().toggleClass("open");
+        if ($('.recipient_fields').css("display") == "none") {
+            $('.recipient_fields').slideDown(400)
+        }
+        else {
+            $('.recipient_fields').slideUp(400)
+        }
+    }
     return false;
 }
 
