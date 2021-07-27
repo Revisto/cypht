@@ -65,6 +65,10 @@ textarea, select, input, .toggle_link {
     padding-top: 0px !important;
     border-radius: 15px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 1s;
+}
+.list_controls:hover {
+    background: #96baff !important;
 }
 .list_controls a {
     opacity: 1 !important;
