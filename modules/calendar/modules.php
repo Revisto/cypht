@@ -158,23 +158,23 @@ class Hm_Output_add_cal_event_form extends Hm_Output_Module {
             $res = '<div class="calendar"><div class="content_title">'.$this->trans('Add an Event').'</div>'.
                 '<form method="post">'.
                 '<input type="hidden" name="hm_page_key" value="'.$this->html_safe(Hm_Request_Key::generate()).'" />'.
-                '<div class="event"><table class="event_form">'.
-                '<tr><td class="cal_label">'.$this->trans('Title').'</td>'.
-                '<td><input required type="text" name="event_title" /></td></tr>'.
-                '<tr><td class="cal_label">'.$this->trans('Detail').'</td>'.
-                '<td><textarea name="event_detail"></textarea></td></tr>'.
-                '<tr><td class="cal_label">'.$this->trans('Date').'</td>'.
-                '<td><input required type="date" name="event_date" placeholder="MM/DD/YYYY" /></td></tr>'.
-                '<tr><td class="cal_label">'.$this->trans('Time').'</td>'.
-                '<td><input required type="time" name="event_time" placeholder="HH:MM" /></td></tr>'.
-                '<tr><td class="cal_label">'.$this->trans('Repeat').'</td>'.
-                '<td><select name="event_repeat">';
+                '<div class="event">'.
+                '<div class="add_event_title"><label class="cal_label">'.$this->trans('Title').'</label>'.
+                '<input required type="text" name="event_title" /></div>'.
+                '<div class="add_event_detail"><label class="cal_label">'.$this->trans('Detail').'</label>'.
+                '<textarea name="event_detail"></textarea></div>'.
+                '<div class="add_event_date"><label class="cal_label">'.$this->trans('Date').'</label>'.
+                '<input required type="date" name="event_date" placeholder="MM/DD/YYYY" /></div>'.
+                '<div class="add_event_time"><label class="cal_label">'.$this->trans('Time').'</label>'.
+                '<input required type="time" name="event_time" placeholder="HH:MM" /></div>'.
+                '<div class="add_event_repeat"><label class="cal_label">'.$this->trans('Repeat').'</label>'.
+                '<select name="event_repeat">';
             foreach ($repeat_opts as $val => $name) {
                 $res .= '<option value="'.$val.'">'.$name.'</option>';
             }
-            $res .= '</select></td></tr>'.
-                '<tr><td></td><td class="event_submit"><input type="submit" value="'.$this->trans('Create').
-                '" /></td></tr></tbody></table></div></form></div>';
+            $res .= '</select></div>'.
+                '<div class="add_event_submit"><input type="submit" value="'.$this->trans('Create').
+                '" /></div></tbody></div></form></div>';
 
             return $res;
         }
