@@ -178,6 +178,7 @@ div.unseen, .unseen .subject { font-weight: 700; }
 .debug_title { color: teal; position: fixed; background-color: #f5f5f5; bottom: 0px; right: 0px; padding: 20px; padding-left: 20px; }
 .long_session { float: left; }
 .long_session input { padding: 0px; float: none; }
+.event { background-color: unset !important; }
 
 .rtl_page .search_content { margin-right: 0px !important; margin-left: 20px; }
 .rtl_page .folder_list { margin-right: 0px !important; margin-left: 20px; }
