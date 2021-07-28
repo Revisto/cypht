@@ -22,3 +22,6 @@
 .event_date { float: right; }
 .event_delete { float: left; font-size: 90%; }
 .add_vcal { padding-right: 35px; float: right; margin-top: 10px; }
+.add_event_title, .add_event_detail, .add_event_repeat, .add_event_time, .add_event_date { margin-bottom: 30px; }
+.event input, .event textarea, .event select { display: block; }
+.event { margin: 40px; }
