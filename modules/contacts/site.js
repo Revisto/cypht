@@ -177,7 +177,7 @@ if (hm_page_name() == 'contacts') {
         window.location.href = '?page=contacts';
     });
     $('.server_title').on("click", function() {
-        $(this).next().toggle();
+        $(this).next().slideToggle();
     });
 }
 else if (hm_page_name() == 'compose') {
