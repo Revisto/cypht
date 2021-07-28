@@ -292,3 +292,97 @@ select option {
     background: rgb(150 186 255);
     color: #fff !important;
 }
+.event_form input {
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #ced6e0;
+    transition: all 0.3s ease-in-out;
+    padding: 5px 15px;
+    background: none;
+    color: #1a3b5d;
+}
+.event_form input:hover, .event_form input:focus {
+    border-color: #3d9cff;
+}
+.event {
+    width: 40%;
+    max-width: 450px;
+    min-width: 200px;
+    background-color: #fff !important;
+    padding: 70px;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 8%;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+}
+input[type="date" i] {
+    display: block !important;
+}
+.event input, .event textarea, .event select {
+    width: 90%;
+    height: 30px;
+    border-radius: 5px !important;
+    box-shadow: none;
+    border: 1px solid #ced6e0;
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+    padding: 5px 15px;
+    background: none;
+    color: #1a3b5d;
+    font-family: "Source Sans Pro", sans-serif;
+}
+@media only screen and (min-width: 1000px) {
+    .add_event_date, .add_event_time {
+        width: 40%;
+        display: inline-block;
+    }
+    .add_event_time {
+        margin-left: 13%;
+    }
+}
+
+.event input:hover, .event textarea:hover, .event select:hover {
+    transition: all 0.3s ease-in-out;
+    color: #1a3b5d;
+    outline: none !important;
+    border-color: #3d9cff !important;
+}
+.event label {
+    display: block;
+    margin-bottom: 7px !important ;
+}
+.add_event_detail textarea {
+    height: 40px;
+}
+.add_event_detail textarea:hover, .add_event_detail textarea:focus {
+    height: 50px;
+}
+.event input:focus, .event textarea:focus {
+    box-shadow: 0px 10px 20px -13px rgba(32, 56, 117, 0.35);
+    outline: none !important;
+    border-color: #3d9cff !important;
+}
+.add_event_submit input {
+    background-color: #96BAFF !important;
+    height: 45px;
+    border-radius: 30px !important;
+    color: #fff !important;
+    width: 97% !important;
+}
+.add_event_submit input {
+    width: 100%;
+}
+.add_event_submit input {
+    border: unset !important;
+}
+.add_event_submit input:hover {
+    background-color: #7C83FD !important;
+    border-radius: 30px !important;
+    border: unset !important;
+}
+.add_event_repeat select {
+    padding: 5px;
+    border-radius: 5px;
+    width: 50%;
+    height: 35px;
+}
