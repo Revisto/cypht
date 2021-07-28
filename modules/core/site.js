@@ -1366,14 +1366,10 @@ var Hm_Utils = {
             }
             if ($(class_name).css("overflow") != "hidden") {
                 $(class_name).prev().toggleClass("open");
-                if ($(class_name).css("display") == "none") {
-                    $(class_name).slideDown(400)
-                }
-                else {
-                    $(class_name).slideUp(400)
-                }
+                $(class_name).slideToggle(400, "swing", function() {
+                    Hm_Utils.save_to_local_storage('formatted_folder_list', $('.folder_list').html());;
+                });
             }
-            setTimeout(function(){ Hm_Utils.save_to_local_storage('formatted_folder_list', $('.folder_list').html()); }, 450);
         }
         return false;
     },

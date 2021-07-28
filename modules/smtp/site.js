@@ -168,15 +168,7 @@ var toggle_recip_flds = function() {
         symbol = ' - ';
     }
     $('.toggle_recipients').text(symbol);
-    if ($('.recipient_fields').css("overflow") != "hidden") {
-        $('.recipient_fields').prev().toggleClass("open");
-        if ($('.recipient_fields').css("display") == "none") {
-            $('.recipient_fields').slideDown(400)
-        }
-        else {
-            $('.recipient_fields').slideUp(400)
-        }
-    }
+    $('.recipient_fields').slideToggle(400);
     return false;
 }
 
