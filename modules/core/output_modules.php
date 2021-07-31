@@ -193,7 +193,7 @@ class Hm_Output_login_start extends Hm_Output_Module {
                 'background-color:#fff;}body{background:linear-gradient(180deg,#faf6f5,#faf6f5,#faf6f5,#faf6f5,'.
                 '#fff);font-size:1em;height:100%;color:#333;font-family:Manrope;padding:0px;margin:0px;'.
                 'font-size:100%;}input,option,select{font-size:100%;padding:3px;border:none;outline:none}textarea,select,input{'.
-                'background-color:#fff0;color:#393f9d;border-radius:3px;}.screen_reader{position:absolute'.
+                'background-color:#fff0;color:#474db5;border-radius:3px;}.screen_reader{position:absolute'.
                 ';top:auto;width:1px;height:1px;overflow:hidden;}.username,.password{border-bottom: 3px solid #7f98f7;height:25px;}'.
                 '.container{margin-bottom:6%;background-color:#fff;padding:75px;border-radius:25px;box-shadow:0 5px 10px 0px rgb(0 0 0 / 10%)'.
                 ';-moz-box-shadow:0 5px 10px 0px rgba(0,0,0,0.1);-webkit-box-shadow:0 5px 10px 0px rgb(0 0 0 / 10%)'.
