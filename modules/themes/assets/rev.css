@@ -448,6 +448,7 @@ input[type="date" i] {
     margin-left: 5% !important;
 }
 .contacts_with_add_button {
+    min-width: 60%;
     background: #fff !important;
     border-radius: 60px;
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
