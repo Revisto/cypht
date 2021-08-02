@@ -158,7 +158,7 @@ class Hm_Output_contacts_list extends Hm_Output_Module {
         }
         $per_page = 25;
         $current_page = $this->get('contact_page', 1);
-        $res = '<table class="contact_list">';
+        $res = '<div class="contacts_with_add_button"><div class="contacts"><table class="contact_list">';
         $res .= '<tr><td colspan="7" class="contact_list_title"><div class="server_title">'.$this->trans('Contacts').'</div></td></tr>';
         $contacts = $this->get('contact_store');
         $editable = $this->get('contact_edit', array());
@@ -210,7 +210,7 @@ class Hm_Output_contacts_list extends Hm_Output_Module {
             }
             $res .= '</td></tr>';
         }
-        $res .= '</table>';
+        $res .= '</table></div>';
         return $res;
     }
 }

@@ -14,10 +14,10 @@
 #cc_contacts, #bcc_contacts, #to_contacts { z-index: 1; display: none; left: 34px; margin-top: -5px; position: absolute; background-color: #fff; border: solid 1px #ddd; padding: 10px; border-radius: 3px 3px 3px 3px; border-top: none; }
 .contact_pages { text-align: center; border-bottom: none !important; }
 .no_contact_sources { text-align: center; color: #999; font-size: 110%; margin-top: 60px; }
-.add_contact { margin-bottom: 30px; margin-top: 10px; color: #666; margin-right: 25px; float: left; clear: left; margin-left: 25px; width: 300px; }
+.add_contact { display: table-cell; vertical-align: top; padding: 25px; padding-top: 10px; margin-bottom: 30px; margin-top: 40px; color: #666; margin-right: 25px; margin-left: 25px; width: 300px; }
 .add_contact input, .add_contact select { margin-bottom: 10px; padding: 5px; margin-right: 5px; }
 .add_contact .server_title { cursor: pointer; }
-.contact_form { margin-top: 10px; display: none; }
+.contact_form { margin-top: 10px; }
 .add_contact .menu_caret { opacity: .7; }
 .contact_update_form { margin-top: 10px; }
 .contact_update_form, .contact_form { white-space: nowrap; }
@@ -29,6 +29,7 @@
 .show_contact { margin-right: 15px; }
 .contact_detail th { font-weight: normal; text-align: left; padding-right: 20px; }
 .contact_fld { max-width: 300px; overflow-x: hidden; text-overflow: ellipsis; }
+.contacts { display: table-cell; }
 
 .mobile .contact_list { margin-left: 0px; font-size: 125%; width: 100%; }
 .mobile .contact_controls img { width: 20px; height: 20px; }

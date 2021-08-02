@@ -170,14 +170,14 @@ if (hm_page_name() == 'contacts') {
         return false;
     });
     $('.show_contact').on("click", function() {
-        $('#'+$(this).data('id')).toggle();
+        $('#'+$(this).data('id')).fadeToggle();
         return false;
     });
     $('.reset_contact').on("click", function() {
         window.location.href = '?page=contacts';
     });
     $('.server_title').on("click", function() {
-        $(this).next().slideToggle();
+        $(this).next().fadeToggle();
     });
 }
 else if (hm_page_name() == 'compose') {

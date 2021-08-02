@@ -156,7 +156,7 @@ class Hm_Output_contacts_form extends Hm_Output_Module {
                 '<input class="edit_contact_submit" type="submit" name="edit_contact" value="'.$this->trans('Update').'" />';
         }
         return '<div class="add_contact"><form class="add_contact_form" method="POST">'.
-            '<div class="server_title">'.$title.
+            '<div class="server_title"><span>'.$title.'</span>'.
             '<img alt="" class="menu_caret" src="'.Hm_Image_Sources::$chevron.'" width="8" height="8" /></div>'.
             '<div class="'.$form_class.'">'.
             '<input type="hidden" name="contact_source" value="local" />'.
@@ -170,6 +170,6 @@ class Hm_Output_contacts_form extends Hm_Output_Module {
             '<label class="screen_reader" for="contact_phone">'.$this->trans('Telephone Number').'</label>'.
             '<input placeholder="'.$this->trans('Telephone Number').'" id="contact_phone" type="text" name="contact_phone" '.
             'value="'.$this->html_safe($phone).'" /><br />'.$button.' <input type="button" class="reset_contact" value="'.
-            $this->trans('Cancel').'" /></div></form></div>';
+            $this->trans('Cancel').'" /></div></form></div></div>';
     }
 }

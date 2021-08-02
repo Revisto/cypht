@@ -12,7 +12,7 @@ setup_base_page('contacts', 'core');
 add_handler('contacts', 'load_contacts', true, 'contacts', 'load_user_data', 'after');
 add_output('contacts', 'contacts_content_start', true, 'contacts', 'content_section_start', 'after');
 add_output('contacts', 'contacts_list', true, 'contacts', 'contacts_content_start', 'after');
-add_output('contacts', 'contacts_content_end', true, 'contacts', 'contacts_list', 'after');
+add_output('contacts', 'contacts_form', true, 'contacts', 'contacts_list', 'after');
 
 add_output('ajax_hm_folders', 'contacts_page_link', true, 'contacts', 'logout_menu_item', 'before');
 
